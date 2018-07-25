@@ -1,9 +1,3 @@
-<template>
-  <section :class="{ container: !fluid, 'container-fluid': fluid }">
-  	<slot></slot>
-  </section>
-</template>
-
 <script>
 export default {
 
@@ -14,6 +8,17 @@ export default {
       type: Boolean,
       default: false,
     },
+
+    tag: {
+      type: String,
+      default: 'div',
+    },
+  },
+
+  render(h) {
+    return h(this.tag, {
+      class: [this.fluid ? 'container-fluid' : 'container'],
+    }, this.$slots.default);
   },
 };
 </script>
