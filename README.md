@@ -57,12 +57,21 @@ new Vue({
 </container>
 ```
 
+#### Custom tag
+
+```html
+<container tag="section">
+  <!-- content -->
+</container>
+```
+
 ## Attributes
 
 
 | Option        | Default       | Type   | Description  |
 | :------------ | :------------ | :----- | :--------- |
 | __fluid__     | false         | boolean| Enable container fluid |
+| __tag__       | div           | string | Custom element tag     |
 
 ## License
 
