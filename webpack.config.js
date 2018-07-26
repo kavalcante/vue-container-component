@@ -5,6 +5,7 @@ const merge = require('webpack-merge');
 module.exports = merge(require('./webpack.base'), {
   context: __dirname,
 
+  target: 'node',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
