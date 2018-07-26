@@ -10,7 +10,7 @@ module.exports = merge(require('./webpack.base'), {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
-    library: 'vue-container-component',
+    library: 'container',
     libraryTarget: 'commonjs2',
   },
 
