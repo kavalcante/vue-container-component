@@ -9,10 +9,11 @@ module.exports = merge(require('./webpack.base'), {
     index: '../src/index.js',
     'index.min': '../src/index.js',
   },
+
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: '[name].js',
-    library: 'VueContainer',
+    library: 'vue-container-component',
     libraryTarget: 'umd',
   },
 
@@ -23,6 +24,5 @@ module.exports = merge(require('./webpack.base'), {
       include: /\.min\.js$/,
       minimize: true,
     }),
-    new webpack.optimize.ModuleConcatenationPlugin(),
   ],
 });
