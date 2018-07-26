@@ -5,7 +5,7 @@ const base = require('./webpack.config');
 
 module.exports = merge(base, {
   entry: './src/index.umd.js',
-  target: 'web',
+  target: 'node',
   output: {
     libraryTarget: 'umd',
     filename: 'index.min.js',
