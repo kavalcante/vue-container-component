@@ -5,7 +5,9 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
+    ecmaVersion: 2017,
+    sourceType: 'module'
   },
   extends: [
     // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
@@ -29,6 +31,9 @@ module.exports = {
     "func-names": 1,
     "linebreak-style": 0,
     "import/no-extraneous-dependencies": 0
+  },
+  env: {
+    amd: true
   },
   globals: {},
 }

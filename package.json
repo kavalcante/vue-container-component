@@ -1,6 +1,6 @@
 {
   "name": "vue-container-component",
-  "version": "1.1.1",
+  "version": "1.1.4",
   "description": "A simple container component inspired on Bootstrap container",
   "main": "dist/index.js",
   "engines": {
@@ -8,6 +8,7 @@
     "npm": "> 3"
   },
   "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook",
     "build": "rm -rf dist && NODE_ENV=production webpack --config build/webpack.config.js"
   },
   "repository": {
@@ -32,6 +33,8 @@
   },
   "homepage": "https://github.com/kavalcante/vue-container#readme",
   "devDependencies": {
+    "@storybook/addon-actions": "^3.2.16",
+    "@storybook/vue": "3.2.15",
     "babel-core": "6.26.0",
     "babel-eslint": "^8.0.2",
     "babel-jest": "21.2.0",
@@ -39,18 +42,32 @@
     "babel-plugin-transform-object-rest-spread": "6.26.0",
     "babel-plugin-transform-runtime": "6.23.0",
     "babel-preset-env": "1.6.0",
-    "css-loader": "^1.0.0",
+    "codecov": "2.3.1",
+    "codecov.io": "0.1.6",
+    "commitizen": "2.9.6",
+    "css-loader": "0.28.7",
+    "cz-conventional-changelog": "2.0.0",
+    "diffable-html": "2.1.0",
     "eslint": "^4.11.0",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.9.0",
-    "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-vue": "^3.14.0",
-    "husky": "^0.14.3",
-    "vue": "^2.5.16",
+    "husky": "0.14.3",
+    "jest": "21.3.0-beta.8",
+    "jest-serializer-html": "4.0.1",
+    "kcd-scripts": "0.27.1",
+    "prettier": "1.8.2",
+    "sinon": "4.1.2",
+    "vue": "2.5.2",
+    "vue-jest": "1.0.0",
     "vue-loader": "13.3.0",
-    "vue-template-compiler": "^2.5.16",
+    "vue-server-renderer": "2.5.2",
+    "vue-template-compiler": "2.5.2",
+    "vue-template-es2015-compiler": "1.6.0",
+    "vue-test-utils": "1.0.0-beta.5",
     "webpack": "3.7.1",
+    "webpack-dev-server": "2.9.2",
     "webpack-merge": "4.1.0"
   }
 }

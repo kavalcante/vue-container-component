@@ -7,7 +7,3 @@ const VueContainer = {
 };
 
 export default VueContainer;
-
-if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(VueContainer);
-}
