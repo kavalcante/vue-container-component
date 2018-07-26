@@ -1,9 +1,3 @@
-import container from './container.vue';
+import container from './container';
 
-const VueContainer = {
-  install(Vue) {
-    Vue.component('vue-container-component', container);
-  },
-};
-
-export default VueContainer;
+export default container;

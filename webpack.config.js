@@ -5,22 +5,24 @@ const merge = require('webpack-merge');
 module.exports = merge(require('./webpack.base'), {
   context: __dirname,
 
-  entry: {
-    index: '../src/index.js',
-    'index.min': '../src/index.js',
-  },
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, '../dist'),
-    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'index.js',
     library: 'vue-container-component',
-    libraryTarget: 'umd',
+    libraryTarget: 'commonjs2',
   },
 
   externals: ['vue'],
 
+  resolve: {
+    alias: {
+      vue$: 'vue/dist/vue.esm.js',
+    },
+  },
+
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
-      include: /\.min\.js$/,
       minimize: true,
     }),
     new webpack.optimize.ModuleConcatenationPlugin(),
