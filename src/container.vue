@@ -1,9 +1,3 @@
-<template>
-  <div :class="fluid ? 'container-fluid' : 'container'">
-    <slot></slot>
-  </div>
-</template>
-
 <script>
 export default {
 
@@ -21,11 +15,11 @@ export default {
     },
   },
 
-  // render(h) {
-  //   return h(this.tag, {
-  //     class: [this.fluid ? 'container-fluid' : 'container'],
-  //   }, this.$slots.default);
-  // },
+  render(h) {
+    return h(this.tag, {
+      class: [this.fluid ? 'container-fluid' : 'container'],
+    }, this.$slots.default);
+  },
 };
 </script>
 
